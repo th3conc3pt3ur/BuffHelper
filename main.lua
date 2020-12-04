@@ -44,9 +44,15 @@ function CheckIcon()
     local areAllBuff = true
     local playerClass, englishClass = UnitClass("player");
 
-    if not HaveBuff("player","Spell_Holy_WordFortitude") then areAllBuff = false end
-    if not HaveBuff("player","Ability_Warrior_BattleShout") then areAllBuff = false end
-    if not HaveBuff("player","Spell_Holy_MagicalSentry") then areAllBuff = false end
+    if englishClass == "PRIEST" then
+        if not HaveBuff("player","Spell_Holy_WordFortitude") then areAllBuff = false end
+    end
+    if englishClass == "WARRIOR" then
+        if not HaveBuff("player","Ability_Warrior_BattleShout") then areAllBuff = false end
+    end
+    if englishClass == "MAGE" then
+        if not HaveBuff("player","Spell_Holy_MagicalSentry") then areAllBuff = false end
+    end
     
     --[[name, rank, texture, count, duration, timeleft = IterateQueriableEffect(UnitBuff, "player", "Spell_Holy_WordFortitude");
     if not name then

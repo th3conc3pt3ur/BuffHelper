@@ -1,5 +1,5 @@
-## Interface: 50001
+## Interface: 90002
 ## Title: BuffHelper
-## Author: Damien LEFEBVRE
+## Author: TheConcepteur
 ## Version: 0.1
 main.lua
